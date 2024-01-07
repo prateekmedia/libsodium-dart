@@ -18,7 +18,7 @@ DynamicLibrary _load() {
     // see also https://libsodium.gitbook.io/doc/installation
     final paths = ['/usr/local/lib/libsodium.dylib', '/opt/homebrew/opt/libsodium/lib/libsodium.dylib'];
     for (final p in paths) {
-      if (await File(p).exists()) {
+      if (File(p).existsSync()) {
           path = p;
       } 
     }
