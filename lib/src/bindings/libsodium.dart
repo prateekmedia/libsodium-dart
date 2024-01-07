@@ -16,7 +16,7 @@ DynamicLibrary _load() {
     String? path;
     // assuming user installed libsodium as per the installation instructions
     // see also https://libsodium.gitbook.io/doc/installation
-    final paths = ['/usr/local/lib/libsodium.dylib', '/opt/homebrew/opt/libsodium/lib/libsodium.dylib'];
+    final paths = ['/usr/local/lib/libsodium.dylib', '/opt/homebrew/lib/libsodium.dylib'];
     for (final p in paths) {
       if (File(p).existsSync()) {
           path = p;
